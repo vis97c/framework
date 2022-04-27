@@ -190,6 +190,13 @@ export const Style = defineComponent({
   })
 })
 
+// <noscript>
+export const NoScript = defineComponent({
+  name: 'NoScript',
+  props: globalProps,
+  setup: (_props, ctx) => () => ctx.slots.default?.()
+})
+
 // <head>
 export const Head = defineComponent({
   name: 'Head',
